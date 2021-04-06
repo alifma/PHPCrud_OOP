@@ -1,6 +1,8 @@
 <?php
   include_once('../handler/index.php');
-  getAll();
+  $process = new DataCollection();
+  $allData = $process->getAll();
+  // getAll();
 ?>
 
 <!doctype html>
@@ -40,7 +42,7 @@
           <tbody>
             <?php 
               $i = 1;
-              foreach(getAll() as $data){
+              foreach($allData as $data){
             ?>
             <tr class="text-center">
               <td><?= $i++?></td>

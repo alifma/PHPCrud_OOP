@@ -1,6 +1,6 @@
-# PHP Crud
-Standard CRUD Application built using PHP and MySQL
-Aplikasi CRUD sedehana yang dibuat dengan PHP dan Mysql
+# PHP Crud OOP
+Standard CRUD Application built using PHP and MySQL and try to implements OOP
+Aplikasi CRUD sedehana yang dibuat dengan PHP dan Mysql dan mencoba untuk mengimplementasikan OOP
 
 ## Instalasi
 - Clone this repository

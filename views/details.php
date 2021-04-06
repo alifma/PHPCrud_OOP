@@ -1,10 +1,13 @@
 <?php
   include_once('../handler/index.php');
+  $process = new DataCollection();
+
   $id = 0;
   if(isset($_GET['id'])){
     $id = $_GET['id'];
   }
-  $details = getDetail($id);
+  
+  $details = $process->getDetail($id);
 ?>
 
 <!doctype html>

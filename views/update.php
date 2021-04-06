@@ -14,11 +14,13 @@
 </head>
 <?php
   include_once('../handler/index.php');
+  $process = new DataCollection();
+
   $id = 0;
   if(isset($_GET['updated_id'])){
     $id = $_GET['updated_id'];
   }
-  $details = getDetail($id);
+  $details = $process->getDetail($id);
 
   if (isset($_POST['update_record'])) {
     $data = [
@@ -27,8 +29,8 @@
       'price' => $_POST['price'],
       'stock' => $_POST['stock']
     ];
-    updateRecord($data, $id);
-    $details = getDetail($id);
+    $process->updateRecord($data, $id);
+    $details = $process->getDetail($id);
   }
 ?>
 

@@ -1,14 +1,15 @@
 <?php 
-
-$host = "localhost";
-$user = "root";
-$pass = "password";
-$dbname = "db_toko";
-
-$con = new mysqli($host, $user, $pass, $dbname);
-
-if($con->connect_error) {
-  echo "Failed to connect database :".$con->connect_error;
-  die();
+class Connection{
+  protected $host = "localhost";
+  protected $user = "root";
+  protected $pass = "password";
+  protected $dbname = "db_toko";
+  public $mysqli;
+  function __construct() {
+    $this->mysqli = new mysqli($this->host, $this->user, $this->pass, $this->dbname);
+    if($this->mysqli->connect_error) {
+      echo "Failed to connect database :".$con->connect_error;
+      die();
+    }
+  }
 }
-?>
